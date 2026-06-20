@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — RepoForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+  :root {
+    --bg: #07080f;
+    --bg-2: #0d1020;
+    --card: #11142a;
+    --border: #1f2342;
+    --fg: #e8ebf7;
+    --muted: #8b91b8;
+    --accent: #7c5cff;
+    --accent-2: #00e5a8;
+    --accent-3: #ff4d8d;
+  }
+  body {
+    font-family: 'Sora', sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    overflow-x: hidden;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(124,92,255,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,92,255,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  .glass {
+    background: rgba(17, 20, 42, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+  }
+</style>
+</head>
+<body class="relative min-h-screen">
+<div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+
+<nav class="fixed top-0 left-0 right-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#7c5cff] to-[#00e5a8] flex items-center justify-center">
+        <i data-lucide="box" class="w-5 h-5 text-white"></i>
+      </div>
+      <span class="font-bold text-xl tracking-tight">RepoForge</span>
+    </a>
+  </div>
+</nav>
+
+<main class="relative z-10 pt-32 pb-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-4xl font-extrabold mb-8">Terms of Service</h1>
+
+    <div class="glass rounded-3xl p-8 space-y-6 text-[var(--muted)] leading-relaxed">
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3">1. Acceptance of Terms</h2>
+        <p>By using RepoForge, you agree to these terms. If you do not agree, please do not use the service.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3">2. Acceptable Use</h2>
+        <p>You agree not to use RepoForge for any illegal purposes or to violate any laws in your jurisdiction. You are responsible for ensuring you have the rights to process any code you input into the service.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3">3. Disclaimer of Warranty</h2>
+        <p>The service is provided "as is" without any warranties. We do not guarantee that the output will be error-free or that the service will be uninterrupted.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3">4. Limitation of Liability</h2>
+        <p>RepoForge shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the service.</p>
+      </section>
+
+      <p class="text-xs pt-8">Last updated: January 15, 2025</p>
+    </div>
+  </div>
+</main>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

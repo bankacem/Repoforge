@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About RepoForge — Our Mission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+  :root {
+    --bg: #07080f;
+    --bg-2: #0d1020;
+    --card: #11142a;
+    --border: #1f2342;
+    --fg: #e8ebf7;
+    --muted: #8b91b8;
+    --accent: #7c5cff;
+    --accent-2: #00e5a8;
+    --accent-3: #ff4d8d;
+  }
+  body {
+    font-family: 'Sora', sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    overflow-x: hidden;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(124,92,255,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,92,255,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  .glass {
+    background: rgba(17, 20, 42, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #7c5cff 0%, #00e5a8 50%, #ff4d8d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+</head>
+<body class="relative min-h-screen">
+<div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+
+<nav class="fixed top-0 left-0 right-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#7c5cff] to-[#00e5a8] flex items-center justify-center">
+        <i data-lucide="box" class="w-5 h-5 text-white"></i>
+      </div>
+      <span class="font-bold text-xl tracking-tight">RepoForge</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-[var(--muted)]">
+      <a href="index.html#tool" class="hover:text-white transition">Converter</a>
+      <a href="index.html#features" class="hover:text-white transition">Features</a>
+      <a href="index.html#articles" class="hover:text-white transition">Articles</a>
+      <a href="about.html" class="text-white">About</a>
+      <a href="contact.html" class="hover:text-white transition">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="relative z-10 pt-32 pb-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">About <span class="gradient-text">RepoForge</span></h1>
+
+    <div class="glass rounded-3xl p-8 md:p-12 space-y-8 leading-relaxed text-[var(--muted)]">
+      <p class="text-xl text-white font-medium">RepoForge was built to bridge the gap between complex codebases and the large language models that help us understand them.</p>
+
+      <p>As engineers, we found ourselves constantly copying and pasting dozens of files into Claude or ChatGPT just to explain a simple architectural pattern. We needed a faster, cleaner way to provide full context without the manual labor.</p>
+
+      <div class="grid md:grid-cols-2 gap-8 py-8">
+        <div class="space-y-3">
+          <h3 class="text-white font-bold text-lg flex items-center gap-2">
+            <i data-lucide="target" class="w-5 h-5 text-[var(--accent)]"></i> Our Mission
+          </h3>
+          <p class="text-sm">To provide developers with the best possible tools for codebase-to-LLM communication, ensuring accuracy, speed, and privacy.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-white font-bold text-lg flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-5 h-5 text-[var(--accent-2)]"></i> Our Promise
+          </h3>
+          <p class="text-sm">Your code is your business. We prioritize client-side processing so your intellectual property stays exactly where it belongs.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white">The Prompt-Driven Era</h2>
+      <p>We believe the future of software engineering is collaborative—between humans and AI. RepoForge is our contribution to that future, helping you spend less time on context-setting and more time on high-level problem solving.</p>
+
+      <p>Built with ❤️ by a global team of developers who believe in the power of open source and the next generation of AI tools.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-[var(--border)] py-12 px-6 relative z-10">
+  <div class="max-w-7xl mx-auto text-center text-sm text-[var(--muted)]">
+    <p>© 2025 RepoForge. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

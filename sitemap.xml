@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/about.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/privacy.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/terms.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/contact.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/articles/the-complete-guide-to-feeding-entire-codebases-into-claude-and-chatgpt.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/articles/why-xml-tags-beat-markdown-for-claude-code-generation.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/articles/token-economics-how-much-repo-fits-in-gpt-4o.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/articles/5-exclude-patterns-every-developer-should-use.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/articles/building-a-cursor-rules-file-from-any-repository.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bankacem.github.io/Repoforge/articles/monorepo-no-problem-smart-subdirectory-conversion.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
