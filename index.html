@@ -347,9 +347,9 @@
     <div class="hidden md:flex items-center gap-8 text-sm text-[var(--muted)]">
       <a href="#tool" class="nav-link">Converter</a>
       <a href="#features" class="nav-link">Features</a>
-      <a href="#how" class="nav-link">How it works</a>
       <a href="#articles" class="nav-link">Articles</a>
-      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
       <a href="#faq" class="nav-link">FAQ</a>
     </div>
     <div class="flex items-center gap-3">
@@ -860,6 +860,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Featured article -->
       <article class="article-card lg:col-span-2 lg:row-span-2 glass rounded-2xl overflow-hidden reveal">
+        <a href="articles/the-complete-guide-to-feeding-entire-codebases-into-claude-and-chatgpt.html" class="block">
         <div class="aspect-[16/9] overflow-hidden">
           <img src="https://picsum.photos/seed/repoforge1/900/500.jpg" alt="Article cover" class="article-img w-full h-full object-cover">
         </div>
@@ -870,6 +871,7 @@
           </div>
           <h3 class="text-2xl md:text-3xl font-bold leading-tight mb-3 hover:text-[var(--accent-2)] transition cursor-pointer">The complete guide to feeding entire codebases into Claude and ChatGPT</h3>
           <p class="text-[var(--muted)] leading-relaxed mb-5">Token budgets, context windows, file ordering, and prompt templates — everything we learned from converting 2M+ repositories into LLM-ready text. Learn which formats work best for which models, how to handle monorepos, and the optimization tricks that cut your token spend in half.</p>
+        </a>
           <div class="flex items-center gap-3">
             <div class="w-9 h-9 rounded-full bg-gradient-to-br from-[#7c5cff] to-[#00e5a8] flex items-center justify-center text-xs font-bold">RF</div>
             <div>
@@ -881,6 +883,7 @@
       </article>
 
       <article class="article-card glass rounded-2xl overflow-hidden reveal">
+        <a href="articles/why-xml-tags-beat-markdown-for-claude-code-generation.html" class="block">
         <div class="aspect-[16/10] overflow-hidden">
           <img src="https://picsum.photos/seed/repoforge2/600/375.jpg" alt="Article cover" class="article-img w-full h-full object-cover">
         </div>
@@ -889,9 +892,11 @@
           <h3 class="text-lg font-bold mt-2 mb-2 hover:text-[var(--accent-2)] transition cursor-pointer leading-snug">Why XML tags beat Markdown for Claude code generation</h3>
           <p class="text-xs text-[var(--muted)] leading-relaxed">A empirical comparison across 50 repos.</p>
         </div>
+        </a>
       </article>
 
       <article class="article-card glass rounded-2xl overflow-hidden reveal">
+        <a href="articles/token-economics-how-much-repo-fits-in-gpt-4o.html" class="block">
         <div class="aspect-[16/10] overflow-hidden">
           <img src="https://picsum.photos/seed/repoforge3/600/375.jpg" alt="Article cover" class="article-img w-full h-full object-cover">
         </div>
@@ -900,9 +905,11 @@
           <h3 class="text-lg font-bold mt-2 mb-2 hover:text-[var(--accent-2)] transition cursor-pointer leading-snug">Token economics: how much repo fits in GPT-4o?</h3>
           <p class="text-xs text-[var(--muted)] leading-relaxed">Real numbers from real repositories.</p>
         </div>
+        </a>
       </article>
 
       <article class="article-card glass rounded-2xl overflow-hidden reveal">
+        <a href="articles/5-exclude-patterns-every-developer-should-use.html" class="block">
         <div class="aspect-[16/10] overflow-hidden">
           <img src="https://picsum.photos/seed/repoforge4/600/375.jpg" alt="Article cover" class="article-img w-full h-full object-cover">
         </div>
@@ -911,9 +918,11 @@
           <h3 class="text-lg font-bold mt-2 mb-2 hover:text-[var(--accent-2)] transition cursor-pointer leading-snug">5 exclude patterns every developer should use</h3>
           <p class="text-xs text-[var(--muted)] leading-relaxed">Cut your output size by 80% instantly.</p>
         </div>
+        </a>
       </article>
 
       <article class="article-card glass rounded-2xl overflow-hidden reveal">
+        <a href="articles/building-a-cursor-rules-file-from-any-repository.html" class="block">
         <div class="aspect-[16/10] overflow-hidden">
           <img src="https://picsum.photos/seed/repoforge5/600/375.jpg" alt="Article cover" class="article-img w-full h-full object-cover">
         </div>
@@ -922,9 +931,11 @@
           <h3 class="text-lg font-bold mt-2 mb-2 hover:text-[var(--accent-2)] transition cursor-pointer leading-snug">Building a Cursor rules file from any repository</h3>
           <p class="text-xs text-[var(--muted)] leading-relaxed">Auto-generate project-aware rules.</p>
         </div>
+        </a>
       </article>
 
       <article class="article-card glass rounded-2xl overflow-hidden reveal">
+        <a href="articles/monorepo-no-problem-smart-subdirectory-conversion.html" class="block">
         <div class="aspect-[16/10] overflow-hidden">
           <img src="https://picsum.photos/seed/repoforge6/600/375.jpg" alt="Article cover" class="article-img w-full h-full object-cover">
         </div>
@@ -933,6 +944,7 @@
           <h3 class="text-lg font-bold mt-2 mb-2 hover:text-[var(--accent-2)] transition cursor-pointer leading-snug">Monorepo? No problem. Smart subdirectory conversion.</h3>
           <p class="text-xs text-[var(--muted)] leading-relaxed">Targeted context without the noise.</p>
         </div>
+        </a>
       </article>
     </div>
   </div>
@@ -1223,18 +1235,18 @@
           <li><a href="#articles" class="hover:text-[var(--accent-2)] transition">Blog</a></li>
           <li><a href="#" class="hover:text-[var(--accent-2)] transition">Guides</a></li>
           <li><a href="#faq" class="hover:text-[var(--accent-2)] transition">FAQ</a></li>
-          <li><a href="/sitemap.xml" class="hover:text-[var(--accent-2)] transition">Sitemap</a></li>
-          <li><a href="/robots.txt" class="hover:text-[var(--accent-2)] transition">Robots.txt</a></li>
+          <li><a href="sitemap.xml" class="hover:text-[var(--accent-2)] transition">Sitemap</a></li>
+          <li><a href="robots.txt" class="hover:text-[var(--accent-2)] transition">Robots.txt</a></li>
         </ul>
       </div>
       <div>
         <h4 class="text-xs uppercase tracking-wider text-[var(--muted)] mb-4">Company</h4>
         <ul class="space-y-2.5 text-sm">
-          <li><a href="#" class="hover:text-[var(--accent-2)] transition">About</a></li>
-          <li><a href="#" class="hover:text-[var(--accent-2)] transition">Privacy</a></li>
-          <li><a href="#" class="hover:text-[var(--accent-2)] transition">Terms</a></li>
+          <li><a href="about.html" class="hover:text-[var(--accent-2)] transition">About</a></li>
+          <li><a href="privacy.html" class="hover:text-[var(--accent-2)] transition">Privacy</a></li>
+          <li><a href="terms.html" class="hover:text-[var(--accent-2)] transition">Terms</a></li>
           <li><a href="#" class="hover:text-[var(--accent-2)] transition">Security</a></li>
-          <li><a href="#" class="hover:text-[var(--accent-2)] transition">Contact</a></li>
+          <li><a href="contact.html" class="hover:text-[var(--accent-2)] transition">Contact</a></li>
         </ul>
       </div>
     </div>

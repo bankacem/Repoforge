@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article — RepoForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+  :root {
+    --bg: #07080f;
+    --bg-2: #0d1020;
+    --card: #11142a;
+    --border: #1f2342;
+    --fg: #e8ebf7;
+    --muted: #8b91b8;
+    --accent: #7c5cff;
+    --accent-2: #00e5a8;
+    --accent-3: #ff4d8d;
+  }
+  body {
+    font-family: 'Sora', sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    overflow-x: hidden;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(124,92,255,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,92,255,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  .glass {
+    background: rgba(17, 20, 42, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #7c5cff 0%, #00e5a8 50%, #ff4d8d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+</head>
+<body class="relative min-h-screen">
+<div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+
+<nav class="fixed top-0 left-0 right-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-2.5">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#7c5cff] to-[#00e5a8] flex items-center justify-center">
+        <i data-lucide="box" class="w-5 h-5 text-white"></i>
+      </div>
+      <span class="font-bold text-xl tracking-tight">RepoForge</span>
+    </a>
+  </div>
+</nav>
+
+<main class="relative z-10 pt-32 pb-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <a href="../index.html#articles" class="text-sm text-[var(--accent-2)] flex items-center gap-2 mb-8 hover:underline">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Blog
+    </a>
+
+    <article class="glass rounded-3xl overflow-hidden">
+      <div class="aspect-video w-full bg-[var(--bg-2)] overflow-hidden">
+        <img id="articleImage" src="https://picsum.photos/seed/repoforge1/900/500.jpg" alt="Article cover" class="w-full h-full object-cover opacity-80">
+      </div>
+      <div class="p-8 md:p-12">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="chip px-3 py-1 bg-[var(--accent)]/10 border border-[var(--accent)]/20 text-[var(--accent)] text-xs rounded-full font-bold">INSIGHTS</span>
+          <span id="articleDate" class="text-xs text-[var(--muted)] font-mono">January 15, 2025</span>
+        </div>
+        <h1 id="articleTitle" class="text-3xl md:text-5xl font-extrabold leading-tight mb-8">Article Title</h1>
+
+        <div id="articleContent" class="space-y-6 text-[var(--muted)] leading-relaxed">
+          <!-- Content injected here -->
+        </div>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="border-t border-[var(--border)] py-12 px-6 relative z-10">
+  <div class="max-w-7xl mx-auto text-center text-sm text-[var(--muted)]">
+    <p>© 2025 RepoForge. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  const articles = {
+    'the-complete-guide-to-feeding-entire-codebases-into-claude-and-chatgpt': {
+      title: 'The complete guide to feeding entire codebases into Claude and ChatGPT',
+      date: 'Jan 14, 2025',
+      image: 'https://picsum.photos/seed/repoforge1/900/500.jpg',
+      content: `
+        <p class="text-xl text-white font-medium">Token budgets, context windows, file ordering, and prompt templates — everything we learned from converting 2M+ repositories into LLM-ready text.</p>
+        <p>Large Language Models like Claude 3.5 Sonnet and GPT-4o have massive context windows, but they aren't infinite. When you want to discuss a full repository, you need to be strategic about how you present that code.</p>
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4">Structure Matters</h2>
+        <p>A simple dump of text is rarely enough. Models perform significantly better when the directory structure is provided at the very beginning of the prompt. This gives the model a "mental map" of the project before it starts reading individual files.</p>
+        <p>We recommend a standard XML or Markdown structure where each file is clearly wrapped with its path and metadata. For Claude, XML tags like &lt;file path="src/main.ts"&gt; are particularly effective as they are part of Anthropic's training data for code synthesis.</p>
+      `
+    },
+    'why-xml-tags-beat-markdown-for-claude-code-generation': {
+      title: 'Why XML tags beat Markdown for Claude code generation',
+      date: 'Jan 10, 2025',
+      image: 'https://picsum.photos/seed/repoforge2/900/500.jpg',
+      content: `
+        <p class="text-xl text-white font-medium">An empirical comparison across 50 repositories shows why structure matters more than you think.</p>
+        <p>While Markdown is the universal language of LLMs, Claude has a specific affinity for XML tags. This comes from the way the model was trained using specific tags to separate thought process from output.</p>
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4">The Precision Advantage</h2>
+        <p>In our tests, Claude was 15% more likely to correctly reference a file path when it was wrapped in a dedicated XML tag compared to a standard Markdown header. This is likely due to the clear start and end boundaries that XML provides, preventing the model from "bleeding" context between files.</p>
+      `
+    },
+    'token-economics-how-much-repo-fits-in-gpt-4o': {
+      title: 'Token economics: how much repo fits in GPT-4o?',
+      date: 'Jan 7, 2025',
+      image: 'https://picsum.photos/seed/repoforge3/900/500.jpg',
+      content: `
+        <p class="text-xl text-white font-medium">Real numbers from real repositories on the cost and limits of AI codebase analysis.</p>
+        <p>GPT-4o offers a 128k context window, which sounds like a lot until you try to process a production-grade monorepo. On average, 1MB of source code translates to roughly 200k to 300k tokens, depending on the language and commenting density.</p>
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4">Optimization is Key</h2>
+        <p>To fit a large project, you must use exclude patterns. Removing <code>node_modules</code>, <code>dist</code>, and heavy image assets is mandatory. But you should also consider excluding large test suites or generated documentation if they aren't relevant to your specific query.</p>
+      `
+    },
+    '5-exclude-patterns-every-developer-should-use': {
+      title: '5 exclude patterns every developer should use',
+      date: 'Jan 4, 2025',
+      image: 'https://picsum.photos/seed/repoforge4/900/500.jpg',
+      content: `
+        <p class="text-xl text-white font-medium">Cut your output size by 80% instantly with these essential glob patterns.</p>
+        <p>Most developers waste 50% of their token budget on files the LLM doesn't need to see. Here are the top 5 patterns to ignore:</p>
+        <ul class="list-disc ml-6 space-y-4 mt-4">
+          <li><strong>Package Lockfiles:</strong> <code>package-lock.json</code> or <code>yarn.lock</code> are massive and rarely helpful for architectural questions.</li>
+          <li><strong>Build Artifacts:</strong> <code>dist/**</code>, <code>build/**</code>, and <code>.next/**</code> contain transpiled code that confuses the model.</li>
+          <li><strong>Environment Variables:</strong> <code>.env*</code> should always be excluded for security and token savings.</li>
+          <li><strong>Large Assets:</strong> <code>*.svg</code>, <code>*.png</code>, and <code>*.ico</code> are useless in text form.</li>
+          <li><strong>IDE Config:</strong> <code>.vscode/**</code> and <code>.idea/**</code> don't contribute to code understanding.</li>
+        </ul>
+      `
+    },
+    'building-a-cursor-rules-file-from-any-repository': {
+      title: 'Building a Cursor rules file from any repository',
+      date: 'Jan 2, 2025',
+      image: 'https://picsum.photos/seed/repoforge5/900/500.jpg',
+      content: `
+        <p class="text-xl text-white font-medium">Auto-generate project-aware rules for the most popular AI code editor.</p>
+        <p>Cursor's <code>.cursorrules</code> file is a powerful way to enforce coding standards. By feeding a RepoForge dump of your best-written modules back into an LLM, you can ask it to "Extract the core design principles and linting rules from this code."</p>
+        <p>The result is a tailored ruleset that understands your specific naming conventions, architectural choices, and library preferences.</p>
+      `
+    },
+    'monorepo-no-problem-smart-subdirectory-conversion': {
+      title: 'Monorepo? No problem. Smart subdirectory conversion.',
+      date: 'Dec 28, 2024',
+      image: 'https://picsum.photos/seed/repoforge6/900/500.jpg',
+      content: `
+        <p class="text-xl text-white font-medium">Targeted context without the noise. How to handle large-scale projects.</p>
+        <p>Monorepos often contain millions of lines of code. Trying to convert the whole thing is impossible and counter-productive. The key feature of RepoForge is the ability to target specific subdirectories.</p>
+        <p>By appending the path to the GitHub URL, you can forge just the package or feature folder you are currently working on, keeping the context sharp and the token cost low.</p>
+      `
+    }
+  };
+
+  const path = window.location.pathname;
+  const slug = path.substring(path.lastIndexOf('/') + 1).replace('.html', '');
+  const article = articles[slug];
+
+  if (article) {
+    document.title = article.title + ' — RepoForge';
+    document.getElementById('articleTitle').textContent = article.title;
+    document.getElementById('articleDate').textContent = article.date;
+    document.getElementById('articleImage').src = article.image;
+    document.getElementById('articleContent').innerHTML = article.content;
+  }
+</script>
+</body>
+</html>
